@@ -11,6 +11,7 @@ public class GradleConfigurationApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		System.out.println("From unit Test");
 	}
 
 }
