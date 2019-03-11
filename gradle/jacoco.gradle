@@ -15,4 +15,5 @@ jacocoTestReport {
         
         html.destination file("${buildDir}/reports/jacocoHtml")
     }
+    executionData(test, integrationTest)
 }
