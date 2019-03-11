@@ -7,6 +7,7 @@ apply plugin: 'io.spring.dependency-management'
 
 apply from: 'gradle/junit5.gradle'
 apply from: 'gradle/integration-test.gradle'
+apply from: 'gradle/jacoco.gradle'
 
 group = 'hr.mlade.cikara.gradle'
 version = '0.0.1-SNAPSHOT'
