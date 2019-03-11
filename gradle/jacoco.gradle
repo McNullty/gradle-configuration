@@ -5,9 +5,9 @@ jacocoTestReport {
         xml.enabled = false
         csv.enabled = false
         html.enabled = true
-        html.destination file("${buildDir}/reports/jacocoUnitTestHtml")
+        html.destination file("${buildDir}/reports/jacocoAllTestHtml")
     }
-    executionData(test)
+    executionData(test, integrationTest)
 }
 
 task jacocoIntegrationTestReport(type: JacocoReport) {
@@ -27,10 +27,10 @@ task jacocoIntegrationTestReport(type: JacocoReport) {
 }
 
 task jacocoAllTestReport(type: JacocoReport) {
-    description 'Generate coverage report of all tests'
+    description 'Generate coverage report of unit tests'
     group = 'verification'
 
-    dependsOn test, integrationTest
+    dependsOn test
     sourceSets sourceSets.main
     executionData(test, integrationTest)
 
@@ -38,10 +38,24 @@ task jacocoAllTestReport(type: JacocoReport) {
         xml.enabled = false
         csv.enabled = false
         html.enabled = true
-        html.destination = file("${buildDir}/reports/jacocoAllTestHtml")
+        html.destination = file("${buildDir}/reports/jacocoUnitTestHtml")
     }
 }
 
 check.dependsOn jacocoTestReport
 check.dependsOn jacocoIntegrationTestReport
 check.dependsOn jacocoAllTestReport
+
+
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.8
+            }
+        }
+    }
+    executionData(test, integrationTest)
+}
+
