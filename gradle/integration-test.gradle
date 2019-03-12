@@ -23,6 +23,8 @@ configurations {
     integrationTestCompile.extendsFrom testCompile
     integrationTestRuntime.extendsFrom testRuntime
     integrationTestImplementation.extendsFrom testImplementation
+    integrationTestCompileOnly.extendsFrom testCompileOnly
+    integrationTestRuntimeOnly.extendsFrom testRuntimeOnly
 }
 
 //Create the task that runs the integration tests found from the
