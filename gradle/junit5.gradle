@@ -4,6 +4,7 @@ dependencies {
     }
 
     testImplementation('org.junit.jupiter:junit-jupiter-engine')
+    testImplementation('org.junit.vintage:junit-vintage-engine')
     testImplementation('org.junit.platform:junit-platform-launcher')
 
     testImplementation('org.codehaus.groovy:groovy-all:2.5.6')
