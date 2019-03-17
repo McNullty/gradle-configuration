@@ -37,9 +37,12 @@ class HomeControllerJavaDocumentation {
   void shouldReturnDefaultMessage() throws Exception {
     this.mockMvc.perform(RestDocumentationRequestBuilders.get("/"))
         .andDo(MockMvcResultHandlers.print())
-        .andExpect(MockMvcResultMatchers.status().isOk())
-        .andExpect(MockMvcResultMatchers.content().
-            string(Matchers.containsString("Hello World")))
+        .andExpect(
+            MockMvcResultMatchers.status()
+                .isOk())
+        .andExpect(
+            MockMvcResultMatchers.content()
+                .string(Matchers.containsString("Hello World")))
         .andDo(MockMvcRestDocumentation.document("home-java"));
   }
 }
