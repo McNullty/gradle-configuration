@@ -6,9 +6,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class GradleConfigurationApplicationTests {
 
-	@Test
-	void contextLoads() {
-		System.out.println("From integration Test");
-	}
+  @Test
+  void contextLoads() {
+    System.out.println("From integration Test");
+  }
 
 }
