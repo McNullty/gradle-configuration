@@ -20,7 +20,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 @ExtendWith({ RestDocumentationExtension.class, SpringExtension.class })
 @WebMvcTest(HomeController.class)
-class HomeControllerJavaIntegrationSpecification {
+class HomeControllerJavaDocumentation {
 
   @Autowired
   private WebApplicationContext context;
