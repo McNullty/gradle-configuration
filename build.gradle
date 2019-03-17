@@ -11,6 +11,7 @@ apply from: 'gradle/test.gradle'
 apply from: 'gradle/integration-test.gradle'
 apply from: 'gradle/jacoco.gradle'
 apply from: 'gradle/asciidoctor.gradle'
+apply from: 'gradle/checkstyle.gradle'
 
 group = 'hr.mlade.cikara.gradle'
 version = '0.0.1-SNAPSHOT'
