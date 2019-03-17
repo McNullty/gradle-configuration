@@ -1,0 +1,10 @@
+= Gradle Configuration example
+
+This project is to test out gradle configurations in controlled and simple way.
+
+== Jacoco
+
+Jacoco reports will generate reports before check task. Three reports will be generated.
+One for unit tests, one for integration tests and one for combined unit and integration tests.
+
+== AsciiDoctor + RestDocs
