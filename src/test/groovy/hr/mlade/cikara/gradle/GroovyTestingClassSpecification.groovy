@@ -13,4 +13,15 @@ class GroovyTestingClassSpecification extends Specification {
         then: 'result should be 4'
         result == 4
     }
+
+    def "Subtract"() {
+        given: 'class under test'
+        GroovyTestingClass gtc = new GroovyTestingClass()
+
+        when: 'subtract is called'
+        def result = gtc.subtract(2,2)
+
+        then: 'result should be 0'
+        result == 0
+    }
 }
