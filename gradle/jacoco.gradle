@@ -46,8 +46,6 @@ check.dependsOn jacocoTestReport
 check.dependsOn jacocoIntegrationTestReport
 check.dependsOn jacocoAllTestReport
 
-
-
 jacocoTestCoverageVerification {
     violationRules {
         rule {
