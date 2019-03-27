@@ -17,3 +17,7 @@ It will fail if code coverage for all tests (integration and unit) is below 80%.
 == AsciiDoctor + RestDocs
 
 Running integrationTest task will generate asciiDoctor snippets to build/generated-snippets directory.
+
+== PITest
+
+You can run mutation test with `./gradlew pitest`

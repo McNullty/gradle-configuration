@@ -1,0 +1,7 @@
+apply plugin: 'info.solidsoft.pitest'
+
+pitest {
+    pitestVersion = '1.4.6'
+}
+
+check.dependsOn 'pitest'
